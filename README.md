@@ -41,8 +41,8 @@ It demonstrates the complete **ML model deployment workflow** — from preproces
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/your-username/ufo-country-predictor.git
-   cd ufo-country-predictor
+   git clone https://github.com/Pritam-Stats/UFO-Sightings-WebApp.git
+   cd ufo-Sightings-WebApp
    ```
 
 2. **Initialize and install dependencies using `uv`**
@@ -57,9 +57,11 @@ It demonstrates the complete **ML model deployment workflow** — from preproces
    ```bash
    flask run
    ```
+   or,
    ```bash
    uv run app.py
    ```
+   or,
    ```bash
    python app.py
    ```
