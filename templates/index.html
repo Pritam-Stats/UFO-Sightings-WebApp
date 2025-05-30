@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFO Sighting Country Predictor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🛸 UFO Country Predictor</h1>
+        <p class="description">Enter sighting details to predict the likely country of observation.</p>
+
+        <form action="{{ url_for('predict') }}" method="post" class="form">
+            <input type="number" name="seconds" placeholder="Seconds (0–60)" required min="0" max="60" />
+            <input type="text" name="latitude" placeholder="Latitude (e.g., -33.86)" required />
+            <input type="text" name="longitude" placeholder="Longitude (e.g., 151.20)" required />
+            <button type="submit" class="btn">🌍 Predict Country</button>
+        </form>
+
+        {% if prediction_text %}
+        <div class="result">
+            <p>{{ prediction_text }}</p>
+        </div>
+        {% endif %}
+
+        <div class="info-section">
+            <h2>Dataset & Model Info</h2>
+            <p>This model is trained on a filtered version of the 
+                <a href="https://www.kaggle.com/datasets/NUFORC/ufo-sightings" target="_blank" rel="noopener">UFO Sightings dataset</a> from Kaggle.</p>
+            <ul>
+                <li><strong>Countries used:</strong> Australia, Canada, Germany, UK, US</li>
+                <li><strong>Model:</strong> Logistic Regression (no tuning/ensemble)</li>
+                <li><strong>Test split:</strong> 25% | <strong>Accuracy:</strong> ~95%</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

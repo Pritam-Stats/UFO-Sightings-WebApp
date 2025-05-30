@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container {
+    background-color: #1e1e1e;
+    padding: 40px 40px;
+    margin-top: 40px;
+    border-radius: 14px;
+    box-shadow: 0 0 25px rgba(0, 255, 204, 0.15);
+    max-width: 600px;
+    width: 80%;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 34px;
+    color: #00ffcc;
+}
+
+.description {
+    font-size: 16px;
+    color: #cccccc;
+    margin-bottom: 25px;
+}
+
+.form input {
+    display: block;
+	justify-content: center;
+    width: 85%;
+    margin: 12px auto;
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background: #333;
+    color: #fff;
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+.form input:focus {
+    background: #444;
+}
+
+.btn {
+    margin-top: 18px;
+    padding: 14px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #00ffcc;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #00ccaa;
+}
+
+.result {
+    margin-top: 25px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #00ffcc;
+}
+
+.info-section {
+    margin-top: 40px;
+    font-size: 15px;
+    color: #dddddd;
+    text-align: left;
+}
+
+.info-section h2 {
+    font-size: 20px;
+    color: #00ffcc;
+    margin-bottom: 10px;
+}
+
+.info-section ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.info-section li {
+    padding: 6px 0;
+}
+
+a {
+    color: #00ffcc;
+    text-decoration: none;
+    transition: text-decoration 0.2s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
